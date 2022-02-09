@@ -1,11 +1,17 @@
 import React from 'react';
-import '../styles/global.scss'
-import Login from '../containers/Login' 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Checkout from '../pages/Checkout';
+import CreateAccount from '../pages/CreateAccount';
+import MyAccount from '../pages/MyAccount';
+import NewPasswrod from '../pages/NewPassword';
+import Orders from '../pages/Orders';
+import SendEmail from '../pages/SendEmail';
+import Login from '../pages/Login'; 
 import Layout from '../containers/Layout';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import RecoveryPassword from '../containers/RecoveryPassword';
+import PasswordRecovery from '../pages/PasswordRecovery';
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
+import '../styles/global.scss'
 
 function App() {
   return (
@@ -13,8 +19,14 @@ function App() {
       <Layout>
         <Routes>
           <Route exact path='/' element={<Home />} />
-          <Route exact path='/login' element={<Login />}/>
-          <Route exact path='/recovery-password' element={<RecoveryPassword />}/>
+          <Route exact path='/login' element={<Login />} />
+          <Route exact path='/password-recovery' element={<PasswordRecovery />} />
+          <Route exact path='/send-email' element={<SendEmail />} />
+          <Route exact path='/new-password' element={<NewPasswrod />} />
+          <Route exact path='/account' element={<MyAccount />} />
+          <Route exact path='/signup' element={<CreateAccount />} />
+          <Route exact path='/checkout' element={<Checkout />} />
+          <Route exact path='/orders' element={<Orders />} />  
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Layout> 
