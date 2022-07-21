@@ -1,0 +1,64 @@
+@use './vars.scss';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tached {
+  color: var(--hospital-green);
+  font-size: 5rem;
+  font-weight: 400;
+  text-decoration: line-through;
+  opacity: 0.6;
+  line-height: 3rem;
+}
+
+.error-message {
+  align-self:center;
+  text-align: center;
+  h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-weight: 400;
+  }
+  button {
+    cursor: pointer;
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #383838;
+    border: none;
+    background-color: var(--hospital-green);
+    padding: 1rem 2.5rem;
+    transform: skew(-5deg);
+    transition: all 0.1s ease;
+  
+  }
+}
+
+.hero {
+  color: white;;
+  font-size: 6.5rem;
+}
+
+.Not-Found {
+  background: linear-gradient(to right, white 50%, #383838 50%);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Not-Found h3 {
+  color: black;
+  margin: 0 40px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
